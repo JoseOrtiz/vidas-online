@@ -15,6 +15,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'therubyracer'
+gem 'haml'
+gem 'haml-rails'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
