@@ -1,14 +1,50 @@
 body{
   background-color: black;
+  width: 80%;
+  margin: auto;
 }
 
 .container{
-  width: 80%;
-  margin: auto;
+  position: relative;
 }
 
 .container img{
   width: 120px;
   float: left;
   padding: 2px;
+  opacity: 0.2;
+}
+
+.isotipo{
+  position: absolute;
+  margin-left: 10%;
+  z-index: 1000;
+  top: 253px;
+  display: none;
+}
+
+.isotipo img{
+  width: 248px;
+}
+
+@media all and (max-width: 620px){
+  .isotipo{
+    left: 0px;
+  }
+}
+
+@media all and (min-width: 621px) and (max-width: 930px){
+  .isotipo{
+    left: 123px;
+  }
+}
+@media all and (min-width: 931px) and (max-width: 1240px){
+  .isotipo{
+    left: 250px;
+  }
+}
+@media all and (min-width: 1241px){
+  .isotipo{
+    left: 373px;
+  }
 }

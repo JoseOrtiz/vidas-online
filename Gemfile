@@ -6,12 +6,14 @@ gem 'rails', '4.0.2'
 group :development do
   gem 'pg'
   gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'therubyracer'
