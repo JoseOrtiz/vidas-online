@@ -1,60 +1,84 @@
-%header
-  %div.logo
-    %div.animate
-      = image_tag 'home/logotipoEntero-01.png'
-    %div.animate
-      = image_tag 'home/logotipoEntero-02.png'
-    %div.animate
-      = image_tag 'home/logotipoEntero-03.png'
-  %div.right
-    %div.records
-      = image_tag 'home/records.png', :alt => 'registros'
-      %span
-        REGISTROS
-    %div.vidasonline
-      = image_tag 'home/vidasonline.png'
-      %span
-        VIDASONLINE
-  %div.upload
-    = image_tag 'home/upload.png'
-    %p
-      SUBE TU REGISTRO
-  %hr
-
-%div.main
-  %div.showcase{:id => 'showcase'}
-    %div.showcase-slide
-      %div.showcase-content
-        = image_tag 'home/foto1.png'
-      %div.showcase-caption
-        Ha cambiado nuestra vida
-        %br
-        cotidiana con una nueva
-        %br
-        forma de comunicarnos.
-    %div.showcase-slide
-      %div.showcase-content
-        = image_tag 'home/foto2.png'
-      %div.showcase-caption
-        Sube un video o
-        %br
-        imagen de cómo
-        %br
-        crees tú que ha
-        %br
-        cambiado nuestra
-        %br
-        vida cotidiana por el
-        %br
-        uso del smartphone.
-    %div.showcase-slide
-      %div.showcase-content
-        = image_tag 'home/foto3.png'
-      %div.showcase-caption
+!!!
+%html
+  %head
+    %title
+      Vidas Online
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag "application"
+    = javascript_include_tag "dashboard"
+    = javascript_include_tag "jquery.nivo.slider.pack"
+    = javascript_include_tag "jquery-ui-1.10.3.custom.min"
+    = javascript_include_tag "portBox.slimscroll.min"
+  %body
+    %header
+      %div.logo
+        %div.animate
+          = image_tag 'home/logotipoEntero-01.png'
+        %div.animate
+          = image_tag 'home/logotipoEntero-02.png'
+        %div.animate
+          = image_tag 'home/logotipoEntero-03.png'
+      %div.right
+        %div.records
+          = image_tag 'home/records.png', :alt => 'registros'
+          %span
+            REGISTROS
+        %div.vidasonline
+          = image_tag 'home/vidasonline.png'
+          %span
+            VIDASONLINE
+      %div.upload
         = image_tag 'home/upload.png'
-        %br
-        Regístrate y sube tu registro
-        %br
-        aquí o vía instagram con el
-        %br
-        hashtag #vidasonline.
+        %p
+          SUBE TU REGISTRO
+      %hr
+
+    %div.main
+      %div.slider-theme.slider-wrapper
+        %div.nivoSlider#slider
+          = image_tag 'home/foto1.png', {:title => '#caption1'}
+          = image_tag 'home/foto2.png', {:title => '#caption2'}
+          = image_tag 'home/foto3.png', {:title => '#caption3'}
+        %div.nivo-caption#caption1
+          Ha cambiado nuestra vida
+          %br
+          cotidiana con una nueva
+          %br
+          forma de comunicarnos.
+        %div.nivo-caption#caption2
+          Sube un video o
+          %br
+          imagen de cómo
+          %br
+          crees tú que ha
+          %br
+          cambiado nuestra
+          %br
+          vida cotidiana por el
+          %br
+          uso del smartphone.
+        %div.nivo-caption#caption3
+          = image_tag 'home/upload.png'
+          %br/
+          %br/
+          Regístrate y sube tu registro
+          %br
+          aquí o vía instagram con el
+          %br
+          hashtag 
+          %i 
+            \#vidasonline.
+    %footer
+      %div.center
+        %p.expand
+          %button
+            = image_tag 'home/plus.png', :alt => 'registros'
+      %div.conditions
+        = link_to 'Política de privacidad', '#'
+        \ \ \ 
+        = link_to 'Condiciones de servicio', '#'
+      %div.records-outer
+        %div.records-inner
+          %p.contract
+            %button
+              = image_tag 'home/less.png'

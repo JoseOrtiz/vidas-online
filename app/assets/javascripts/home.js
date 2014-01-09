@@ -1,8 +1,3 @@
-$(document).ready(function(){
-  lightUp();
-  addIsotipo();
-});
-
 var lightUp = function() {
   var imgs = $('.lightUp');
   var rnd = imgs.eq(Math.floor(imgs.length*Math.random()));
@@ -22,8 +17,12 @@ var isogif = function(loop){
   img = isotipos.eq(loop);
   img.css('display','block ');
   setTimeout(function(){isogif(loop);},1000);
-}
+};
 
 var addIsotipo = function(){
   setTimeout(function(){isogif(0);},4000);
-}
+};
+$(document).ready(function(){
+  lightUp();
+  addIsotipo();
+});
