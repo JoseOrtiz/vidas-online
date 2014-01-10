@@ -18,6 +18,7 @@ gem 'therubyracer'
 gem 'haml'
 gem 'haml-rails'
 gem 'pg'
+gem 'rails_serve_static_assets'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
