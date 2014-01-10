@@ -5,11 +5,13 @@ class HomeController < ApplicationController
     end
   end
   def dashboard
-    require 'net/http'
-    require 'uri'
-    uri = URI.parse("https://api.instagram.com/v1/tags/vidas-online/media/recent?access_token=ACCESS-TOKEN")
     respond_to do |format|
       format.html
     end
+  end
+  def getAccessToken
+    require 'net/http'
+    require 'uri'
+    uri = URI.parse("https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=/oauth&response_type=code")
   end
 end
