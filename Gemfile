@@ -4,7 +4,6 @@ ruby '1.9.3'
 gem 'rails', '4.0.2'
 
 group :development do
-  gem 'pg'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
