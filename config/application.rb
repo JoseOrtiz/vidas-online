@@ -21,5 +21,8 @@ module VidasOnline
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.secret_key_base = ENV['secret_key_base']
+    config.serve_static_assets = true
+    config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+    config.assets.compile = true
   end
 end
