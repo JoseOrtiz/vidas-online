@@ -18,15 +18,23 @@
 }
 
 .slider-theme .nivo-directionNav a{
-  font-size: 40px;
-  font-family: 'Titillium Web';
   color: white;
+  height: 60px;
+  text-indent: -9999px;
+  width: 50px;
 }
 
 .slider-theme .nivo-prevNav {
-  left:-40px;
+  background: url('home/prev.png') no-repeat;
+  left:-60px;
 }
 
 .slider-theme .nivo-nextNav {
-  right:-40px;
+  background: url('home/next.png') no-repeat;
+  right:-60px;
 }
+
+.nano {width: 100%; height: 460px; overflow-y: scroll;}
+.nano .content { padding: 10px; }
+.nano .pane   { background: #888; width: 100%;}
+.nano .slider { background: #111; }

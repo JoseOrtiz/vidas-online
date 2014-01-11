@@ -1,7 +1,7 @@
 var lightUp = function() {
   var imgs = $('.lightUp');
   var rnd = imgs.eq(Math.floor(imgs.length*Math.random()));
-  rnd.animate({opacity:1}, 1000, lightUp);
+  rnd.animate({opacity:1}, 100, lightUp);
 }
 
 var isogif = function(loop){
@@ -20,7 +20,7 @@ var isogif = function(loop){
 };
 
 var addIsotipo = function(){
-  setTimeout(function(){isogif(0);},4000);
+  setTimeout(function(){isogif(0);},8000);
 };
 $(document).ready(function(){
   lightUp();

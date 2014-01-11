@@ -5,10 +5,11 @@
       Vidas Online
     = stylesheet_link_tag 'application'
     = javascript_include_tag "application"
-    = javascript_include_tag "dashboard"
-    = javascript_include_tag "jquery.nivo.slider.pack"
-    = javascript_include_tag "jquery-ui-1.10.3.custom.min"
-    = javascript_include_tag "portBox.slimscroll.min"
+    /
+      = javascript_include_tag "dashboard"
+      = javascript_include_tag "jquery.nivo.slider.pack"
+      = javascript_include_tag "jquery-ui-1.10.3.custom.min"
+      = javascript_include_tag "portBox.slimscroll.min"
   %body
     %header
       %div.logo
@@ -82,3 +83,9 @@
           %p.contract
             %button
               = image_tag 'home/less.png'
+          %div.nano
+            %div.pictures.content
+              - @pictures.each do |pic|
+                %div.insta-cont
+                  = image_tag pic['images']['thumbnail']['url']
+                  = "@"+pic['user']['username']

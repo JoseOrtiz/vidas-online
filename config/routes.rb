@@ -7,6 +7,8 @@ VidasOnline::Application.routes.draw do
 
   get 'dashboard' => 'home#dashboard', as: :dashboard
 
+  get 'oauth' => 'home#dashboard'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
