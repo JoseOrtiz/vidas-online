@@ -7,6 +7,15 @@
     = javascript_include_tag "application"
     = javascript_include_tag "home"
   %body
+    %div.isotipo
+      = link_to dashboard_url do
+        = image_tag 'home/Isotipo-01.png'
+    %div.isotipo
+      = link_to dashboard_url do
+        = image_tag 'home/Isotipo-02.png'
+    %div.isotipo
+      = link_to dashboard_url do
+        = image_tag 'home/Isotipo-03.png'
     %div.container
       = image_tag 'home/FotoChica1.png', :class => 'lightUp'
       = image_tag 'home/FotoChica2.png', :class => 'lightUp'
@@ -56,12 +65,3 @@
       = image_tag 'home/FotoChica46.png', :class => 'lightUp'
       = image_tag 'home/FotoChica47.png', :class => 'lightUp'
       = image_tag 'home/FotoChica48.png', :class => 'lightUp'
-    %div.isotipo
-      = link_to dashboard_url do
-        = image_tag 'home/Isotipo-01.png'
-    %div.isotipo
-      = link_to dashboard_url do
-        = image_tag 'home/Isotipo-02.png'
-    %div.isotipo
-      = link_to dashboard_url do
-        = image_tag 'home/Isotipo-03.png'

@@ -21,7 +21,7 @@ body{
   position: absolute;
   margin-left: 10%;
   z-index: 1000;
-  top: 253px;
+  top: 252px;
   display: none;
 }
 
@@ -191,15 +191,15 @@ footer .records-inner .pictures .insta-cont img{
 
 @font-face {
   font-family: 'Titillium Web';
-  src: url('Titillium_Web/TitilliumWeb-Regular.ttf');
-  src: url('Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
+  src: font-url('Titillium_Web/TitilliumWeb-Regular.ttf');
+  src: font-url('Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Voces';
-  src: url('Voces/Voces-Regular.ttf');
-  src: url('Voces/Voces-Regular.ttf') format('truetype');
+  src: font-url('Voces/Voces-Regular.ttf');
+  src: font-url('Voces/Voces-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

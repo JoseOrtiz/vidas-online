@@ -49,5 +49,8 @@ $(document).ready(function(){
   $(document).on('mouseleave','.nivo-prevNav', function(){
     $('#slider img').attr("data-transition","");
   });
-  $(".nano").nanoScroller();
+  $(".holder").perfectScrollbar({
+    suppressScrollX: true,
+    wheelSpeed: 50,
+  });
 });

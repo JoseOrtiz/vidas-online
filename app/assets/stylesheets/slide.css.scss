@@ -34,7 +34,11 @@
   right:-60px;
 }
 
-.nano {width: 100%; height: 460px; overflow-y: scroll;}
-.nano .content { padding: 10px; }
-.nano .pane   { background: #888; width: 100%;}
-.nano .slider { background: #111; }
+.holder {
+  width: 100%; 
+  height: 450px;
+  position: relative;
+  margin:0px auto;
+  padding:0px;
+  overflow: hidden;
+}

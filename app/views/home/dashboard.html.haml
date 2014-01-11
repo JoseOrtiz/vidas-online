@@ -37,9 +37,9 @@
     %div.main
       %div.slider-theme.slider-wrapper
         %div.nivoSlider#slider
-          = image_tag 'home/foto1.png', {:title => '#caption1'}
-          = image_tag 'home/foto2.png', {:title => '#caption2'}
-          = image_tag 'home/foto3.png', {:title => '#caption3'}
+          = image_tag 'home/foto1.jpg', {:title => '#caption1'}
+          = image_tag 'home/foto2.jpg', {:title => '#caption2'}
+          = image_tag 'home/foto3.jpg', {:title => '#caption3'}
         %div.nivo-caption#caption1
           Ha cambiado nuestra vida
           %br
@@ -83,7 +83,7 @@
           %p.contract
             %button
               = image_tag 'home/less.png'
-          %div.nano
+          %div.holder
             %div.pictures.content
               - @pictures.each do |pic|
                 %div.insta-cont
