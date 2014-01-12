@@ -86,6 +86,7 @@
           %div.holder
             %div.pictures.content
               - @pictures.each do |pic|
-                %div.insta-cont
+                %div.insta-cont{:data => {:link => media_path(:id => pic['id'])}}
                   = image_tag pic['images']['thumbnail']['url']
                   = "@"+pic['user']['username']
+          %div.info

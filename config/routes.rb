@@ -9,6 +9,8 @@ VidasOnline::Application.routes.draw do
 
   get 'oauth' => 'home#dashboard'
 
+  post 'media/:id' => 'home#media', as: :media
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

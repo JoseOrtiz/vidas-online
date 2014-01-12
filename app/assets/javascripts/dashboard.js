@@ -34,11 +34,7 @@ var hideRecords = function(){
     $('.records-outer').animate({'height':'0px'},'fast'); 
   });
 }
-$(document).ready(function(){
-  logogif(0);
-  startSlider();
-  showRecords();
-  hideRecords();
+var sliderEffects = function(){
   $(document).on('mouseover','.nivo-prevNav', function(){
     $('#slider img').attr("data-transition","slideInRight");
   });
@@ -49,6 +45,35 @@ $(document).ready(function(){
   $(document).on('mouseleave','.nivo-prevNav', function(){
     $('#slider img').attr("data-transition","");
   });
+}
+var showInstagram = function(data){
+  var info = $('.info');
+  info.html(data);
+  info.show();
+  $('*:not(.info)').click(function() {
+    info.hide();
+    event.stopPropagation();
+});
+}
+var instagramFetch = function() {
+  $('.insta-cont').click(function () {
+    var link = $(this).data('link')
+    $.ajax({
+        url: link,
+        type: 'post',
+        success: function(data){
+          showInstagram(data);
+        },
+    });
+  });
+}
+$(document).ready(function(){
+  logogif(0);
+  startSlider();
+  showRecords();
+  hideRecords();
+  sliderEffects();
+  instagramFetch();
   $(".holder").perfectScrollbar({
     suppressScrollX: true,
     wheelSpeed: 50,

@@ -125,6 +125,7 @@ footer .records-inner{
   z-index: 10;
   height: 500px;
   display: block;
+  position: relative;
 }
 footer .conditions{
   float: right;
@@ -165,6 +166,50 @@ footer .records-inner .pictures .insta-cont{
 }
 footer .records-inner .pictures .insta-cont img{
   width: 100%;
+}
+
+footer .info{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 50%;
+  display: none;
+  z-index: 30;
+}
+.instagram{
+  height: 470px;
+  background-color: black;
+  padding: 5px;
+}
+.instagram .username{
+  text-align: left;
+  color: #9a9a9a;
+  width: 306px;
+  margin: auto;
+  font-size: 11px;
+  padding: 5px;
+}
+
+.instagram .caption{
+  margin: auto;
+  text-align: left;
+  color: #9a9a9a;
+  height: 60px;
+  width: 306px;
+  font-size: 11px;
+  font-style: italic;
+}
+.instagram .image{
+  text-align: center;
+}
+.instagram .share{
+  margin: auto;
+  text-align: left;
+  color: white;
+  height: 60px;
+  width: 306px;
+  font-weight: bold;
+  font-size: 11px;
 }
 
 @media all and (max-width: 620px){

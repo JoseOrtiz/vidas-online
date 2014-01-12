@@ -1,0 +1,10 @@
+%div.instagram
+  %div.username
+    = "@"+@picture['data']['user']['username']
+  %div.image
+    = image_tag @picture['data']['images']['low_resolution']['url']
+  %div.caption
+    = @picture['data']['caption']['text']
+  %div.share
+    COMPARTE EL LINK
+    
