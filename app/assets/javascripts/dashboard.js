@@ -22,6 +22,9 @@ var startSlider = function () {
     animSpeed: 500,
     effect: 'slideInLeft',
   });
+  $('#uploadimg').click(function(){
+    $('.upload').click();
+  });
 };
 var showRecords = function(){
   $('.expand').click(function(){
@@ -130,7 +133,7 @@ var vidasonline = function(){
   });
 }
 var showUpload = function(){
-  $('.upload, #caption3 img').click(function(){
+  $('.upload').click(function(){
     TINY.box.show({
       url:Routes.upload_path(),
       openjs: function(){ fadeOutRecords(), loginEvent()},

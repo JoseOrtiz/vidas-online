@@ -212,10 +212,9 @@ footer .info{
 }
 .instagram .image{
   text-align: center;
-  height: 306px;
 }
 .instagram .image img{
-  width: 306px;
+  width: 90%;
 }
 .instagram .share{
   margin: auto;
@@ -317,6 +316,7 @@ footer .info{
   border-bottom: 1px solid white;
   padding-top: 4px;
   padding-bottom: 4px;
+  color: white;
 }
 .modal .form textarea{
   background-color: transparent;
