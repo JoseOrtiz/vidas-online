@@ -24,7 +24,7 @@ gem 'instagram_api'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "js-routes"
 gem 'carrierwave'
-gem 'i18n', github: 'svenfuchs/i18n'
+gem 'i18n'
 
 gem 'rails_12factor', group: :production
 
