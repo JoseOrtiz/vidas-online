@@ -325,6 +325,7 @@ footer .info{
   border: 0px solid;
   resize: none;
   margin-top: 10px;
+  color: white;
 }
 .modal .form #user_username{
   padding-left: 2em;
@@ -340,6 +341,9 @@ footer .info{
   left: 5px;
 }
 .modal .form input:focus{
+  outline: 0;
+}
+.modal .form textarea:focus{
   outline: 0;
 }
 .modal .form input::-webkit-input-placeholder{
