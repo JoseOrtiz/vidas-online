@@ -1,0 +1,14 @@
+%div.modal
+  = form_tag upload_path, :id => 'upload_form' do
+    %div.register
+      Sube tu imágen o video aquí:
+    %div.square
+      %div.icons
+        = image_tag 'home/folder.png'
+        = image_tag 'home/comment.png'
+      %div.form
+        = file_field_tag :file, :placeholder => 'Elige tu archivo'
+        = text_area_tag :comment, nil, :placeholder => 'Deja un comentario'
+    %br
+    %div.imageFooter
+      = image_tag 'home/upload.png', :id => :register

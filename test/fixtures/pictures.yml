@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filename: MyString
+  comment: MyString
+  upload_date: 2014-01-13 20:14:21
+
+two:
+  filename: MyString
+  comment: MyString
+  upload_date: 2014-01-13 20:14:21

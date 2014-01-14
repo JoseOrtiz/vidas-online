@@ -1,4 +1,6 @@
 VidasOnline::Application.routes.draw do
+  get "users/new"
+  get "sessions/new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,8 +10,18 @@ VidasOnline::Application.routes.draw do
   get 'dashboard' => 'home#dashboard', as: :dashboard
 
   get 'oauth' => 'home#dashboard'
+  get 'about' => 'home#about', as: :about
+  get 'upload' => 'pictures#new', as: :upload
+  get 'register' => 'home#register', as: :register
 
-  post 'media/:id' => 'home#media', as: :media
+  get 'media/:id' => 'home#media', as: :media
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "emailregistration" => "users#new", :as => "emailregistration"
+  resources :users
+  resources :sessions
+  resources :pictures
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

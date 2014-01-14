@@ -85,6 +85,10 @@
               = image_tag 'home/less.png'
           %div.holder
             %div.pictures.content
+              - @uploaded.each do |pic|
+                %div.uploaded-cont{:data => {:link => picture_path(pic)}}
+                  = image_tag pic.caption.url
+                  = "@"+pic.user.username
               - @pictures.each do |pic|
                 %div.insta-cont{:data => {:link => media_path(:id => pic['id'])}}
                   = image_tag pic['images']['thumbnail']['url']

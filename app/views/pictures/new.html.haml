@@ -1,0 +1,14 @@
+%div.modal
+  = form_for @picture, :html => { :multipart => true } do |f|
+    %div.register
+      Sube tu imágen o video aquí:
+    %div.square
+      %div.icons
+        = image_tag 'home/folder.png'
+        = image_tag 'home/comment.png'
+      %div.form
+        = f.file_field :caption, :placeholder => 'Elige tu archivo'
+        = f.text_area :comment, :placeholder => 'Deja un comentario'
+    %br
+    %div.imageFooter
+      = image_submit_tag 'home/upload.png', :id => :register

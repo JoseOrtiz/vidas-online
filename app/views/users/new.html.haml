@@ -1,0 +1,23 @@
+%div.modal
+  = form_for @user do |f|
+    %div.register
+      Regístrate
+    %div.square
+      %div.icons
+        = image_tag 'home/profile.png'
+        = image_tag 'home/password.png'
+        = image_tag 'home/mail.png'
+      %div.form
+        = f.text_field :username, :placeholder => 'Crear un nombre de usuario'
+        %span
+          @
+        = f.password_field :password, :placeholder => 'Crea una contraseña'
+        = f.text_field :email, :placeholder => 'Introduce el correo electrónico '
+    %br
+    %div
+      Al tocar “Continuar”, indicas que has leído la
+      = link_to 'Política de privacidad', "#"
+      y que aceptas las
+      = link_to 'Condiciones del servicio.', '#'
+    %div.imageFooter
+      = image_tag 'home/forward.png', :id => :register

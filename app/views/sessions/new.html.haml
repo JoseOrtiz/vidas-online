@@ -1,0 +1,18 @@
+%div.modal
+  %br
+  %br
+  %br
+  = form_tag sessions_path, :id => 'login_form' do
+    %div.register
+      Inicia sesión
+    %div.square
+      %div.icons
+        = image_tag 'home/profile.png'
+        = image_tag 'home/password.png'
+      %div.form
+        = text_field_tag :username, nil, placeholder: 'Nombre de usuario'
+        %span
+          @
+        = password_field_tag :password, nil,   placeholder: 'Contraseña'
+    %div.imageFooter
+      = image_submit_tag 'home/forward.png', :id => :login

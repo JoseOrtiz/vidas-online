@@ -26,5 +26,6 @@ module VidasOnline
     config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
     config.assets.compile = true
     config.action_controller.perform_caching = false
+    config.i18n.enforce_available_locales = false
   end
 end

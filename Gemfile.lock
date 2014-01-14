@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/svenfuchs/i18n.git
+  revision: 8fc94e7e9ec20396e974b0549cf499662238bf56
+  specs:
+    i18n (0.6.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,12 +33,17 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    bcrypt-ruby (3.1.2)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -60,7 +71,6 @@ GEM
     httparty (0.12.0)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.6.9)
     instagram_api (0.0.4)
       hashie
       httparty
@@ -70,6 +80,8 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    js-routes (0.9.6)
+      rails (>= 3.2)
     json (1.8.1)
     libv8 (3.16.14.3)
     mail (2.5.4)
@@ -144,16 +156,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   better_errors
   binding_of_caller
+  carrierwave
   coffee-rails
   execjs
   foreman
   haml
   haml-rails
+  i18n!
   instagram_api
   jbuilder
   jquery-rails
+  js-routes
   pg
   rails (= 4.0.2)
   rails_12factor

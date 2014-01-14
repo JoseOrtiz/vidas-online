@@ -6,7 +6,7 @@ gem 'rails', '4.0.2'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-	gem 'foreman'
+  gem 'foreman'
 end
 
 gem 'sass-rails'
@@ -21,6 +21,10 @@ gem 'haml'
 gem 'haml-rails'
 gem 'pg'
 gem 'instagram_api'
+gem "bcrypt-ruby", :require => "bcrypt"
+gem "js-routes"
+gem 'carrierwave'
+gem 'i18n', github: 'svenfuchs/i18n'
 
 gem 'rails_12factor', group: :production
 
