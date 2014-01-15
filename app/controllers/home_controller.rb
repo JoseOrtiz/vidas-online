@@ -35,8 +35,19 @@ class HomeController < ApplicationController
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       req = Net::HTTP::Get.new(uri.request_uri)
       response = http.request req
-      body = ActiveSupport::JSON.decode(response.body)
-      body['data']
+      body = JSON.parse(response.body)
+      ret = body['data']
+      while not body['pagination']['next_min_id'].blank?
+        uri = URI.parse("https://api.instagram.com/v1/tags/vidasonline/media/recent?client_id=#{ENV['INSTAGRAM_CLIENT_ID']}&min_tag_id=#{body['pagination']['next_min_id']}")
+        http = Net::HTTP.new(uri.host, uri.port)
+        http.use_ssl = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        req = Net::HTTP::Get.new(uri.request_uri)
+        response = http.request req
+        body = JSON.parse(response.body)
+        ret += body['data']
+      end
+      ret
     rescue Exception => e
       []
     end

@@ -21,9 +21,10 @@ var startSlider = function () {
     controlNav: false,
     animSpeed: 500,
     effect: 'slideInLeft',
-  });
-  $('#uploadimg').click(function(){
-    $('.upload').click();
+    afterChange: function(){
+      $('.nivo-caption img').on('click',function(){
+        $('.upload').click();
+      })},
   });
 };
 var showRecords = function(){
@@ -151,7 +152,7 @@ var loginEvent = function(){
       close: false,
     });
   });
-  $('#login').on('click',function(){
+  $('#login, #login-link').on('click',function(){
     TINY.box.show({
       url:Routes.new_session_path(),
       openjs: function() {fadeOutRecords(), login()},

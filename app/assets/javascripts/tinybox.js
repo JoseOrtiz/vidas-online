@@ -26,7 +26,8 @@ TINY.box=function(){
 				if(!v.animate&&v.width&&v.height){
 					p.style.width=v.width+'px'; p.style.height=v.height+'px'
 				}else{
-					p.style.width=p.style.height='100px'
+					p.style.width='90%'
+					p.style.height='450px'
 				}
 			}
 			if(v.mask){this.mask(); this.alpha(m,1,v.opacity)}else{this.alpha(j,1,100)}

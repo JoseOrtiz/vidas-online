@@ -2,9 +2,19 @@
   %div.username
     = "@"+@picture['data']['user']['username']
   %div.image
-    = image_tag @picture['data']['images']['low_resolution']['url']
+    - if not @picture['data']['videos'].blank?
+      %meta{'http-equiv' => 'Content-Type', :content => 'video/mp4'}/
+      %video{:width => '90%', :controls=>''}
+        %source{:src=>@picture['data']['videos']['low_resolution']['url'], :type => 'video/mp4'}
+        = image_tag @picture['data']['images']['low_resolution']['url']
+    - else
+      = image_tag @picture['data']['images']['low_resolution']['url']
   %div.caption
-    = @picture['data']['caption']['text']
+    - if not @picture['data']['caption'].blank?
+      = @picture['data']['caption']['text']
   %div.share
     COMPARTE EL LINK
-    
+    %br
+    %div.iconshare
+      = image_tag 'home/facebook.png'
+      = image_tag 'home/twitter.png'
