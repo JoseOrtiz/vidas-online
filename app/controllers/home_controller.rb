@@ -29,7 +29,7 @@ class HomeController < ApplicationController
   def getHashtag
     begin
       require 'net/http'
-      uri = URI.parse("https://api.instagram.com/v1/tags/vidasonline/media/recent?client_id=#{ENV['INSTAGRAM_CLIENT_ID']}")
+      uri = URI.parse("https://api.instagram.com/v1/tags/vidasonline/media/recent?client_id=#{ENV['INSTAGRAM_CLIENT_ID']}&min_tag_id=0")
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
