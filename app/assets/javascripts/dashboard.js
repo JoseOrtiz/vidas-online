@@ -144,6 +144,15 @@ var showUpload = function(){
   });
 }
 var loginEvent = function(){
+  $('.fb').on('click',function(e){
+    e.preventDefault();
+    return FB.login(function(response){
+      if(response.authResponse){
+        window.location = '/auth/facebook/callback'
+      }
+    },{scope: 'email'});
+  });
+
   $('.emailreg').on('click',function(){
     TINY.box.show({
       url:Routes.emailregistration_path(),

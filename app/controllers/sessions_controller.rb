@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.authenticate(params[:username], params[:password])
     if user
-      session[:user_id] = user.id
+      sign_in(:user, user)
       head :created
     else
       head :bad_request

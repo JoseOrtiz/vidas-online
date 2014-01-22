@@ -19,9 +19,17 @@ VidasOnline::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
   get "emailregistration" => "users#new", :as => "emailregistration"
+  match 'auth/:provider/callback', to: 'authentication#create', via: [:get, :post]
+  match 'auth/failure', to: 'authentication#failure', via: [:get, :post]
   resources :users
+  resources :facebookuser
   resources :sessions
   resources :pictures
+
+  devise_for :users, :controllers => {
+    :omniauth_callbacks => "devise/omniauth_callbacks",
+    :sessions => 'sessions',
+  }
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

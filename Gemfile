@@ -25,6 +25,9 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem "js-routes"
 gem 'carrierwave'
 gem 'i18n'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 
 gem 'rails_12factor', group: :production
 
